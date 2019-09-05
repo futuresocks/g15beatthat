@@ -23,4 +23,10 @@ def test_set_score()
   assert_equal(1234, @player.score)
 end
 
+def test_calculate_score()
+  roll = [1,2,3,4]
+  expected_result = 4321
+  assert_equal(expected_result, @player.calculate_score(roll))
+end
+
 end
