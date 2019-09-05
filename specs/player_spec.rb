@@ -38,4 +38,14 @@ def test_player_roll()
   assert_equal(4, roll.length())
 end
 
+def test_take_turn()
+  #roll dice
+  roll = @player.roll(@dice)
+  #calculate player score
+  final_result = @player.calculate_score(roll)
+  #update player score
+  @player.set_score(final_result)
+  assert_equal(final_result, @player.score)
+end
+
 end
