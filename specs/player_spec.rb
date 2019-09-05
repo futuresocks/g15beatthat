@@ -32,13 +32,10 @@ def test_calculate_score()
 end
 
 def test_player_roll()
-  roll = @player.roll(@dice)
-  assert_equal(4, roll.length())
   #player roll should return an array of numbers
   #there should be however many numbers as there are dice
-  #those numbers should fall within an expected range
-
-  # assert_equal()
+  roll = @player.roll(@dice)
+  assert_equal(4, roll.length())
 end
 
 end

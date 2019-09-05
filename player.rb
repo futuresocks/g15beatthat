@@ -20,4 +20,12 @@ def calculate_score(roll)
   return joined_numbers.to_i()
 end
 
+def roll(dice)
+  result = []
+  for die in dice
+    roll = die.roll()
+    result.push(roll)
+  end
+  return result
+end
 end
