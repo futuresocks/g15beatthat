@@ -18,8 +18,9 @@ def test_score()
   assert_equal(0, @player.score)
 end
 
-def test_roll_dice()
-
+def test_set_score()
+  @player.set_score(1234)
+  assert_equal(1234, @player.score)
 end
 
 end
