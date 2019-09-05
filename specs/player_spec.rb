@@ -8,6 +8,8 @@ class TestPlayer < MiniTest::Test
 
 def setup
   @player = Player.new("Nathan")
+  @die = Dice.new(6)
+  @dice = [@die, @die, @die, @die]
 end
 
 def test_name()
@@ -24,9 +26,19 @@ def test_set_score()
 end
 
 def test_calculate_score()
-  roll = [1,2,3,4]
+  roll = [2,1,3,4]
   expected_result = 4321
   assert_equal(expected_result, @player.calculate_score(roll))
+end
+
+def test_player_roll()
+  roll = @player.roll(@dice)
+  assert_equal(4, roll.length())
+  #player roll should return an array of numbers
+  #there should be however many numbers as there are dice
+  #those numbers should fall within an expected range
+
+  # assert_equal()
 end
 
 end

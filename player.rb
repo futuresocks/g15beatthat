@@ -13,11 +13,11 @@ end
 
 def calculate_score(roll)
   #sort incoming roll highest to lowest
-
+  sorted_roll = roll.sort().reverse()
   #join numbers together
-
+  joined_numbers = sorted_roll.join()
   #return result
-  
+  return joined_numbers.to_i()
 end
 
 end
