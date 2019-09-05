@@ -1,5 +1,6 @@
 require('minitest/autorun')
 require('minitest/rg')
+require ('pry')
 require_relative('../dice.rb')
 
 class TestDice < MiniTest::Test
@@ -13,9 +14,9 @@ class TestDice < MiniTest::Test
   end
 
   def test_roll()
-    expected_range = [1..6]
+    expected_range = [1,2,3,4,5,6]
     roll = @dice.roll()
-    is_in_range = expected_range.includes(roll)
+    is_in_range = expected_range.include?(roll)
     assert_equal(true, is_in_range)
   end
 

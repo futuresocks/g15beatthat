@@ -7,6 +7,7 @@ class Dice
   end
 
   def roll()
+    return rand(1..@sides)
   end
 
 end
