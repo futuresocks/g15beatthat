@@ -18,8 +18,12 @@ end
 
 def test_check_win
   #both players take turn
-  #
-
+@player1.score = 5555
+@player2.score = 3333
+  #compare the results
+result = @game.check_win()
+  #declare winner
+assert_equal(@player1, result)
 end
 
 
