@@ -6,4 +6,7 @@ class Dice
     @sides = sides
   end
 
+  def roll()
+  end
+
 end

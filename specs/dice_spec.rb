@@ -13,7 +13,10 @@ class TestDice < MiniTest::Test
   end
 
   def test_roll()
-    assert_equal([1..6], @dice.roll())
-  end 
+    expected_range = [1..6]
+    roll = @dice.roll()
+    is_in_range = expected_range.includes(roll)
+    assert_equal(true, is_in_range)
+  end
 
 end
